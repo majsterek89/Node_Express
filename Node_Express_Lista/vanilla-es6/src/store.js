@@ -110,11 +110,12 @@ export default class Store {
 		todos.push(item);
 		this.setLocalStorage(todos);
 
-		sendItemToBackEnd(item).then(() => {
+		sendItemToBackEnd(item);
+		
 			if (callback) {
 				callback();
 			}
-		});
+	
 	}
 
 	/**
